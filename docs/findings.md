@@ -12,6 +12,16 @@
 - No-token baseline이 가장 높은 shuffled gap (+11.9%)을 보임 -- token embedding이 action의 shortcut을 만들 수 있음
 **영향**: Topology token의 단순 additive 결합은 비효과적. 다음 시도는 (1) curvature-only token (speed/dynamics 제거), (2) cross-attention 기반 conditioning, (3) VP/OccAny 기반 visual topology (non-action-derived)
 
+## 2026-03-30: A1 모델 사고 영상 surprise — 사고/비사고 구분 가능하나 pre-crash signal 없음
+**맥락**: A1 model (OccAny depth-supervised, +20% motion gap)을 30K 사고 영상 중 100개에 적용. Zero-action prediction surprise + embedding change rate 두 메트릭으로 사고 전 surprise 상승 패턴 검증.
+**발견**:
+- 사고 영상 평균 surprise 76.96 vs 비사고 51.09 (1.51x) — 이전 모델 1.35x보다 개선
+- **사고 직전 surprise 상승 패턴 없음**: pre-crash 2s median ratio 0.98x, >1.0인 영상 47% (chance level)
+- 시간 창 1s/2s/3s/5s 모두 median ratio ~1.0으로 일관되게 signal 없음
+- Embedding change rate도 동일: pre-crash median 0.81x
+- 개별 영상 타임라인에서 일부 spike 있으나 일관성 부족
+**영향**: 사고 영상에서 pre-crash warning signal은 현재 approach로는 불가. 원인: (1) RTB→dashcam 도메인 갭, (2) zero-action prediction 한계, (3) 사고는 visual surprise가 아닌 dynamic/semantic surprise일 가능성. Domain adaptation 또는 action estimation이 필요.
+
 ## 2026-03-30: Composite cost function이 raw MSE보다 planning에서 우수
 **맥락**: Track 1 corridor planning에서 raw embedding MSE cost로 logged action top-1 accuracy 0%, rank 29.9/64로 planning 실패
 **발견**:
