@@ -52,25 +52,28 @@ def run(cfg):
     #########################
 
     dataset = swm.data.HDF5Dataset(**cfg.data.dataset, transform=None)
+
+    # Split BEFORE fitting normalizers to avoid data leak
+    rnd_gen = torch.Generator().manual_seed(cfg.seed)
+    train_set, val_set = spt.data.random_split(
+        dataset, lengths=[cfg.train_split, 1 - cfg.train_split], generator=rnd_gen
+    )
+
+    # Fit normalizers on train subset only
     transforms = [get_img_preprocessor(source='pixels', target='pixels', img_size=cfg.img_size)]
-    
+
     with open_dict(cfg):
         for col in cfg.data.dataset.keys_to_load:
             if col.startswith("pixels"):
                 continue
 
-            normalizer = get_column_normalizer(dataset, col, col)
+            normalizer = get_column_normalizer(train_set.dataset, col, col, indices=train_set.indices)
             transforms.append(normalizer)
 
             setattr(cfg.wm, f"{col}_dim", dataset.get_dim(col))
 
     transform = spt.data.transforms.Compose(*transforms)
     dataset.transform = transform
-
-    rnd_gen = torch.Generator().manual_seed(cfg.seed)
-    train_set, val_set = spt.data.random_split(
-        dataset, lengths=[cfg.train_split, 1 - cfg.train_split], generator=rnd_gen
-    )
 
     train = torch.utils.data.DataLoader(train_set, **cfg.loader,shuffle=True, drop_last=True, generator=rnd_gen)
     val = torch.utils.data.DataLoader(val_set, **cfg.loader, shuffle=False, drop_last=False)

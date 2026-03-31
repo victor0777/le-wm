@@ -1,0 +1,298 @@
+{
+  "config": {
+    "window": 20,
+    "yaw_threshold": 0.15,
+    "speed_stop": 1.0,
+    "speed_moving": 2.0,
+    "speed_change_thresh": 2.0,
+    "stop_majority": 0.6
+  },
+  "per_recording": {
+    "da8241": {
+      "stats": {
+        "total_frames": 8575,
+        "distribution": {
+          "left": {
+            "count": 63,
+            "pct": 0.73
+          },
+          "right": {
+            "count": 36,
+            "pct": 0.42
+          },
+          "straight": {
+            "count": 5819,
+            "pct": 67.86
+          },
+          "stop": {
+            "count": 1446,
+            "pct": 16.86
+          },
+          "accel": {
+            "count": 544,
+            "pct": 6.34
+          },
+          "decel": {
+            "count": 667,
+            "pct": 7.78
+          }
+        }
+      },
+      "consistency": {
+        "total_transitions": 8523,
+        "same_label": 8353,
+        "diff_label": 170,
+        "consistency_pct": 98.01,
+        "mean_run_length": 38.63,
+        "median_run_length": 12.0,
+        "max_run_length": 300,
+        "run_length_std": 66.59
+      }
+    },
+    "b5b236": {
+      "stats": {
+        "total_frames": 1810,
+        "distribution": {
+          "left": {
+            "count": 216,
+            "pct": 11.93
+          },
+          "right": {
+            "count": 184,
+            "pct": 10.17
+          },
+          "straight": {
+            "count": 637,
+            "pct": 35.19
+          },
+          "stop": {
+            "count": 376,
+            "pct": 20.77
+          },
+          "accel": {
+            "count": 132,
+            "pct": 7.29
+          },
+          "decel": {
+            "count": 265,
+            "pct": 14.64
+          }
+        }
+      },
+      "consistency": {
+        "total_transitions": 1800,
+        "same_label": 1705,
+        "diff_label": 95,
+        "consistency_pct": 94.72,
+        "mean_run_length": 17.24,
+        "median_run_length": 11.0,
+        "max_run_length": 109,
+        "run_length_std": 19.23
+      }
+    },
+    "c48e71": {
+      "stats": {
+        "total_frames": 3115,
+        "distribution": {
+          "left": {
+            "count": 369,
+            "pct": 11.85
+          },
+          "right": {
+            "count": 393,
+            "pct": 12.62
+          },
+          "straight": {
+            "count": 995,
+            "pct": 31.94
+          },
+          "stop": {
+            "count": 756,
+            "pct": 24.27
+          },
+          "accel": {
+            "count": 248,
+            "pct": 7.96
+          },
+          "decel": {
+            "count": 354,
+            "pct": 11.36
+          }
+        }
+      },
+      "consistency": {
+        "total_transitions": 3104,
+        "same_label": 2962,
+        "diff_label": 142,
+        "consistency_pct": 95.43,
+        "mean_run_length": 20.36,
+        "median_run_length": 13.0,
+        "max_run_length": 116,
+        "run_length_std": 22.21
+      }
+    },
+    "736fcb": {
+      "stats": {
+        "total_frames": 3685,
+        "distribution": {
+          "left": {
+            "count": 386,
+            "pct": 10.47
+          },
+          "right": {
+            "count": 312,
+            "pct": 8.47
+          },
+          "straight": {
+            "count": 681,
+            "pct": 18.48
+          },
+          "stop": {
+            "count": 1686,
+            "pct": 45.75
+          },
+          "accel": {
+            "count": 233,
+            "pct": 6.32
+          },
+          "decel": {
+            "count": 387,
+            "pct": 10.5
+          }
+        }
+      },
+      "consistency": {
+        "total_transitions": 3670,
+        "same_label": 3550,
+        "diff_label": 120,
+        "consistency_pct": 96.73,
+        "mean_run_length": 27.3,
+        "median_run_length": 12.0,
+        "max_run_length": 291,
+        "run_length_std": 46.97
+      }
+    },
+    "8014dd": {
+      "stats": {
+        "total_frames": 1785,
+        "distribution": {
+          "left": {
+            "count": 179,
+            "pct": 10.03
+          },
+          "right": {
+            "count": 200,
+            "pct": 11.2
+          },
+          "straight": {
+            "count": 345,
+            "pct": 19.33
+          },
+          "stop": {
+            "count": 690,
+            "pct": 38.66
+          },
+          "accel": {
+            "count": 165,
+            "pct": 9.24
+          },
+          "decel": {
+            "count": 206,
+            "pct": 11.54
+          }
+        }
+      },
+      "consistency": {
+        "total_transitions": 1777,
+        "same_label": 1708,
+        "diff_label": 69,
+        "consistency_pct": 96.12,
+        "mean_run_length": 23.18,
+        "median_run_length": 13.0,
+        "max_run_length": 291,
+        "run_length_std": 42.79
+      }
+    }
+  },
+  "aggregate": {
+    "total_frames": 18970,
+    "distribution": {
+      "left": {
+        "count": 1213,
+        "pct": 6.39
+      },
+      "right": {
+        "count": 1125,
+        "pct": 5.93
+      },
+      "straight": {
+        "count": 8477,
+        "pct": 44.69
+      },
+      "stop": {
+        "count": 4954,
+        "pct": 26.11
+      },
+      "accel": {
+        "count": 1322,
+        "pct": 6.97
+      },
+      "decel": {
+        "count": 1879,
+        "pct": 9.91
+      }
+    }
+  },
+  "consistency": {
+    "da8241": {
+      "total_transitions": 8523,
+      "same_label": 8353,
+      "diff_label": 170,
+      "consistency_pct": 98.01,
+      "mean_run_length": 38.63,
+      "median_run_length": 12.0,
+      "max_run_length": 300,
+      "run_length_std": 66.59
+    },
+    "b5b236": {
+      "total_transitions": 1800,
+      "same_label": 1705,
+      "diff_label": 95,
+      "consistency_pct": 94.72,
+      "mean_run_length": 17.24,
+      "median_run_length": 11.0,
+      "max_run_length": 109,
+      "run_length_std": 19.23
+    },
+    "c48e71": {
+      "total_transitions": 3104,
+      "same_label": 2962,
+      "diff_label": 142,
+      "consistency_pct": 95.43,
+      "mean_run_length": 20.36,
+      "median_run_length": 13.0,
+      "max_run_length": 116,
+      "run_length_std": 22.21
+    },
+    "736fcb": {
+      "total_transitions": 3670,
+      "same_label": 3550,
+      "diff_label": 120,
+      "consistency_pct": 96.73,
+      "mean_run_length": 27.3,
+      "median_run_length": 12.0,
+      "max_run_length": 291,
+      "run_length_std": 46.97
+    },
+    "8014dd": {
+      "total_transitions": 1777,
+      "same_label": 1708,
+      "diff_label": 69,
+      "consistency_pct": 96.12,
+      "mean_run_length": 23.18,
+      "median_run_length": 13.0,
+      "max_run_length": 291,
+      "run_length_std": 42.79
+    }
+  }
+}

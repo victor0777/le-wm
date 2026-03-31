@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Training artifacts
+lightning_logs/
+outputs/2026-*/
+environment*.json
+requirements_frozen*.txt
+
+# Tool state
+.omx/
+
+# IDE
+.vscode/
+.idea/

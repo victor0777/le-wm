@@ -11,10 +11,16 @@ def get_img_preprocessor(source: str, target: str, img_size: int = 224):
     return dt.transforms.Compose(to_image, resize)
 
 
-def get_column_normalizer(dataset, source: str, target: str):
-    """Get normalizer for a specific column in the dataset."""
+def get_column_normalizer(dataset, source: str, target: str, indices=None):
+    """Get normalizer for a specific column in the dataset.
+
+    Args:
+        indices: optional subset indices to fit on (e.g. train split only)
+    """
     col_data = dataset.get_col_data(source)
     data = torch.from_numpy(np.array(col_data))
+    if indices is not None:
+        data = data[indices]
     data = data[~torch.isnan(data).any(dim=1)]
     mean = data.mean(0, keepdim=True).clone()
     std = data.std(0, keepdim=True).clone()
