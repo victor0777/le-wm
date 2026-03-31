@@ -22,6 +22,7 @@
 
 ## Phase 4: Anomaly Detection Pipeline
 - [x] E3: surprise score 구현 + 사고 영상 적용 — 사고/비사고 1.35x 비율, pre-crash signal 약함
+- [x] Route-specific anomaly detection prototype — holdout +58% surprise (p<1e-20), maneuver 차별화 확인
 - [ ] Domain gap 축소 (사고 영상 정상 구간으로 fine-tuning)
 - [ ] Surprise 변화율 기반 사고 징후 탐지
 - [ ] ROC curve / threshold 최적화

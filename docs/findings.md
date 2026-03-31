@@ -185,3 +185,26 @@
 - Token이 장기 학습에서 action shortcut을 생성하여 cross-domain motion sensitivity 감소
 - Topology token 실험 (+2.5%)과 동일한 패턴 — token overfit
 **영향**: token conditioning의 cross-domain 효과는 early stopping이 필요. 최적 epoch은 ~7-10. 또는 token embedding에 dropout/regularization 추가 필요
+
+## 2026-03-31: 73개 recording의 실질 지역 다양성은 4-5개 — cross-domain에 불충분
+**맥락**: Cross-domain scaling을 위해 73개 recording의 지역 분포 분석
+**발견**:
+- 73개 recording, 실질 4-5개 지역 클러스터: 판교(16), 기안↔판교 축(31, 왕복), Livlab(20), 기타(4)
+- Codex 권장: 최소 6개 독립 지역, 권장 8-10개 → 현재 데이터는 미달
+- 기안-판교/판교-기안은 같은 도로 왕복 → 실질 1개 지역
+- 유일한 장거리 구간: Namyang, Chunhju, Songdo (각 1개씩)
+- 프레임 수는 5M+로 충분하지만, 지역 다양성이 병목
+**영향**: 73개 전체를 학습해도 cross-domain generalization은 제한적. Route-specific application이 현실적 방향. Cross-domain은 새로운 지역 데이터 확보 후 장기 목표로 전환
+
+## 2026-03-31: Route-specific anomaly detection이 통계적으로 유효 (surprise score)
+**맥락**: A1 모델로 holdout(8014dd) vs train(736fcb) recording의 prediction error(surprise) 비교
+**발견**:
+- Holdout이 train보다 모든 horizon에서 유의하게 높은 surprise (p<1e-20)
+  - h=1 (0.5s): 0.178 vs 0.113 (+58.3%)
+  - h=3 (1.5s): 0.315 vs 0.225 (+40.4%)
+  - h=5 (2.5s): 0.416 vs 0.320 (+30.0%)
+- Cosine surprise가 MSE보다 강한 신호 (holdout/train ratio 1.88~1.99x)
+- Maneuver별: stop 가장 낮음 (예측 쉬움), accel 가장 높음 (가속이 "surprising")
+- Short-horizon (0.5s)이 가장 강한 anomaly signal (gap 58% vs 30% at 2.5s)
+- Top surprise moments: 교차로 진입, 좌회전, 갑작스러운 장면 변화
+**영향**: route-specific anomaly detection의 기반 확보. Surprise score가 "이 구간에서 비정상적인 행동"을 탐지하는 유효한 metric. 다음: threshold 최적화, 실제 anomaly (사고/위반) 데이터로 검증
