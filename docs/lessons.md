@@ -1,5 +1,17 @@
 # Lessons Learned
 
+## 2026-03-30: Action-derived tokens are redundant with action embedding
+**문제**: Maneuver token (+6.3%) 위에 topology token (curvature/speed/dynamics)을 additive로 추가하면 motion conditioning이 개선될 것으로 기대
+**원인**: Topology token의 speed_zone과 dynamics_state는 action (vx, vy, yaw_rate)과 proprio (speed)에서 직접 파생된 정보. 모델에 이미 있는 정보를 discrete token으로 다시 주입하면:
+  1. Redundancy: 같은 정보의 두 경로가 생겨 gradient가 분산됨
+  2. Information leakage: token이 action의 shortcut이 되어 predictor가 action embedding 대신 token에 의존
+  3. Optimization 어려움: 3개 embedding (action + maneuver + topology)의 합이 predictor에 유용한 representation을 형성하기 어려움
+**해결**: Token은 action에 없는 정보를 제공해야 함. 유효한 후보:
+  - Visual topology (VP lane mask에서 추출한 차선 수, 교차로 타입) -- action과 독립
+  - Goal/route token -- 의도를 나타내는 정보
+  - Curvature-only token (road shape, action과 약하게 상관)
+**교훈**: Conditioning token은 action에 orthogonal한 정보를 제공할 때만 유효. Action-derived feature는 token 대신 action encoder 자체를 개선하는 것이 나음.
+
 ## 2026-03-28: DDP multi-GPU training deadlocks with HDF5 dataset
 **문제**: 8-GPU 및 5-GPU DDP 학습 시 NCCL 초기화 후 학습이 시작되지 않음 (GPU utilization 100%이나 VRAM ~640MB로 모델 로딩 전 상태)
 **원인**: `swm.data.HDF5Dataset`이 각 DDP 프로세스에서 동일 HDF5 파일을 동시에 열고, `num_workers=6`으로 DataLoader가 추가 워커를 생성하여 파일 lock 경합 발생 추정

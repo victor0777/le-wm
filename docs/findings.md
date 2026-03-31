@@ -1,5 +1,28 @@
 # Findings
 
+## 2026-03-30: Topology token 추가가 motion conditioning을 악화시킴
+**맥락**: Phase 7.2 structured scene transfer. Maneuver-only token이 V3 cross-domain에서 shuffled gap +6.3%를 달성한 상태에서, topology token (curvature x speed_zone x dynamics = 60 classes)을 추가하여 dual-token conditioning 실험.
+**발견**:
+- V3 no-token (L2_vp_v3 epoch 10): shuffled gap +11.9%, zeroed +5.9%
+- V3 maneuver-only (track2_v3 epoch 10): shuffled gap +6.3%, zeroed -9.6%
+- V3 maneuver+topology (track2_v3_topo epoch 10): shuffled gap +2.5%, zeroed -6.5%
+- V3 maneuver+topology epoch 15: shuffled gap +3.4%, zeroed -7.4%
+- Topology token은 curvature/speed/dynamics를 product encoding했지만, speed와 dynamics는 action에 이미 포함된 정보를 redundant하게 제공
+- 두 개 embedding을 additive로 합산하면 optimization landscape가 복잡해져 motion conditioning signal이 희석됨
+- No-token baseline이 가장 높은 shuffled gap (+11.9%)을 보임 -- token embedding이 action의 shortcut을 만들 수 있음
+**영향**: Topology token의 단순 additive 결합은 비효과적. 다음 시도는 (1) curvature-only token (speed/dynamics 제거), (2) cross-attention 기반 conditioning, (3) VP/OccAny 기반 visual topology (non-action-derived)
+
+## 2026-03-30: Composite cost function이 raw MSE보다 planning에서 우수
+**맥락**: Track 1 corridor planning에서 raw embedding MSE cost로 logged action top-1 accuracy 0%, rank 29.9/64로 planning 실패
+**발견**:
+- Composite cost (cosine progress + smoothness + consistency + action reg)가 rank 22.9/64로 v1 MSE 29.9 대비 23% 개선
+- Top-10 accuracy: composite 29% vs v1 MSE 4% (7배)
+- Action regularization이 가장 유용한 단일 component (logged rank 14.1/64) — logged action이 본질적으로 smooth하고 moderate하기 때문
+- Trajectory shape (delta-sequence cosine) 방식은 rank 32.9로 오히려 악화 — 모델의 autoregressive rollout이 GT 궤적 shape을 잘 재현하지 못함
+- CEM이 composite cost에서 100/100 sequences에서 logged action보다 나은 cost 달성, 20.9% improvement over 5 iterations
+- 그러나 여전히 top-1 accuracy 1%로 낮음 — cost function만으로는 planning을 위한 충분한 signal이 아님
+**영향**: Composite cost가 raw MSE보다 낫지만, 근본적으로 embedding space가 action-discriminative하지 않음. Planning 개선을 위해서는 cost function 튜닝보다 모델의 action sensitivity 강화 (Phase 5.5 depth supervision, Track 2 maneuver conditioning)가 선행되어야 함
+
 ## 2026-03-28: RTB 데이터의 velocity 토픽으로 CAN 데이터 대체 가능
 **맥락**: LeWM 학습용 action space 구성 시 CAN 데이터(조향각, 스로틀, 브레이크)가 없음
 **발견**: rosbag-ingest가 추출한 velocity 토픽 (vx, vy, angular_yaw)이 CAN 대체로 사용 가능. 100Hz로 충분한 시간 해상도, frame_index.npy로 카메라 프레임에 정확히 정렬됨
@@ -149,6 +172,7 @@
 - **V3 (오버랩→비오버랩 cross-domain)**: shuffled gap -0.4% (토큰없음) → **+16.7% (토큰있음)**
   - ADR-008의 decision gate (+10%) 초과! Maneuver token이 cross-domain에서 action에 의미를 부여
 - V2 (비오버랩→오버랩): +1.4% → +4.0% (소폭 개선, 역방향은 효과 제한적)
-- V1 (오버랩→오버랩): +24.3% → +3.0% (하락, 학습 불완전 epoch 7/15가 원인 가능)
-- 주의: V1 하락은 maneuver token이 action의 역할을 일부 대체하여 action sensitivity를 낮출 가능성도 있음
-**영향**: maneuver token이 "왜 이 action인가"의 맥락을 제공하여 cross-domain generalization의 bridge 역할. V3 +16.7%는 H4 (goal 부재) 가설에 대한 해결책이 될 수 있음. Phase 2 (structured transfer) 진행 정당화
+- V1 (오버랩→오버랩) epoch 7: +24.3% → +3.0% (학습 불완전)
+- **V1 full 15-epoch: +25.8%** — A1 baseline +24.3%을 초과! Regression은 불완전 학습이 원인
+- Motion gap 학습 곡선: ep5 +8.3% → ep10 +19.4% → ep15 +25.8% (monotonic 증가)
+**영향**: maneuver token이 overlap 성능을 해치지 않고 오히려 소폭 개선 (+24.3% → +25.8%), 동시에 cross-domain에서도 action에 의미를 부여 (+16.7%). Phase 2 (structured transfer) 진행 정당화

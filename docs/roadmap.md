@@ -63,10 +63,12 @@
 - [x] Track 1: Corridor planning — CEM works (24.8% improvement), partial pass ← **done**
 - [x] Track 2: Maneuver token conditioning — **V3 cross-domain +16.7%, gate passed!** ← **done**
 - [x] Track 2 decision gate: cross-domain shuffled gap > 10% — **V3 +16.7% > 10% PASSED**
-- [ ] Track 2 follow-up: V1 full 15-epoch retraining (overlap regression investigation)
-- [ ] Track 1 follow-up: VP/OccAny-based cost function for planning
+- [x] Track 2 follow-up: V1 full 15-epoch — **+25.8%, regression 해결, A1 초과** ← **done**
+- [x] Track 1 follow-up: VP/OccAny-based cost function for planning — composite cost rank 22.9 vs v1 MSE 29.9, top-10 29% ← **done**
 
-### Phase 7.2: Structured Scene Transfer (1-2개월, Track 2 성공 시)
+### Phase 7.2: Structured Scene Transfer (1-2개월, Track 2 성공 시) ← **current**
+- [x] Topology token labeling (curvature x speed_zone x dynamics = 60 classes) ← **done**
+- [x] Dual-token (maneuver+topology) training V3-topo — **shuffled gap +2.5% (regression!)** ← **done**
 - [ ] Auto-derived lane topology from VP + OccAny
 - [ ] Cross-route transfer with structured conditioning
 

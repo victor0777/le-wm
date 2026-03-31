@@ -1,0 +1,747 @@
+{
+  "config": {
+    "curvature_window": 10,
+    "curv_straight": 0.02,
+    "curv_gentle": 0.08,
+    "speed_stopped": 1.0,
+    "speed_slow": 5.0,
+    "speed_medium": 12.0,
+    "dynamics_window": 5,
+    "accel_thresh": 0.5,
+    "brake_thresh": -0.5,
+    "n_total_classes": 60
+  },
+  "per_recording": {
+    "da8241": {
+      "total_frames": 8575,
+      "curvature": {
+        "straight": {
+          "count": 7094,
+          "pct": 82.73
+        },
+        "gentle_curve": {
+          "count": 1368,
+          "pct": 15.95
+        },
+        "sharp_curve": {
+          "count": 113,
+          "pct": 1.32
+        }
+      },
+      "speed_zone": {
+        "stopped": {
+          "count": 1526,
+          "pct": 17.8
+        },
+        "slow": {
+          "count": 421,
+          "pct": 4.91
+        },
+        "medium": {
+          "count": 1491,
+          "pct": 17.39
+        },
+        "fast": {
+          "count": 5137,
+          "pct": 59.91
+        }
+      },
+      "dynamics": {
+        "cruising": {
+          "count": 4294,
+          "pct": 50.08
+        },
+        "accelerating": {
+          "count": 1386,
+          "pct": 16.16
+        },
+        "braking": {
+          "count": 1334,
+          "pct": 15.56
+        },
+        "stopped": {
+          "count": 1494,
+          "pct": 17.42
+        },
+        "starting": {
+          "count": 67,
+          "pct": 0.78
+        }
+      },
+      "combined_unique": 30,
+      "combined_top10": [
+        {
+          "token_id": 15,
+          "curvature": "straight",
+          "speed_zone": "fast",
+          "dynamics": "cruising",
+          "count": 2846,
+          "pct": 33.19
+        },
+        {
+          "token_id": 3,
+          "curvature": "straight",
+          "speed_zone": "stopped",
+          "dynamics": "stopped",
+          "count": 1489,
+          "pct": 17.36
+        },
+        {
+          "token_id": 35,
+          "curvature": "gentle_curve",
+          "speed_zone": "fast",
+          "dynamics": "cruising",
+          "count": 805,
+          "pct": 9.39
+        },
+        {
+          "token_id": 16,
+          "curvature": "straight",
+          "speed_zone": "fast",
+          "dynamics": "accelerating",
+          "count": 621,
+          "pct": 7.24
+        },
+        {
+          "token_id": 17,
+          "curvature": "straight",
+          "speed_zone": "fast",
+          "dynamics": "braking",
+          "count": 535,
+          "pct": 6.24
+        },
+        {
+          "token_id": 10,
+          "curvature": "straight",
+          "speed_zone": "medium",
+          "dynamics": "cruising",
+          "count": 431,
+          "pct": 5.03
+        },
+        {
+          "token_id": 11,
+          "curvature": "straight",
+          "speed_zone": "medium",
+          "dynamics": "accelerating",
+          "count": 405,
+          "pct": 4.72
+        },
+        {
+          "token_id": 12,
+          "curvature": "straight",
+          "speed_zone": "medium",
+          "dynamics": "braking",
+          "count": 355,
+          "pct": 4.14
+        },
+        {
+          "token_id": 37,
+          "curvature": "gentle_curve",
+          "speed_zone": "fast",
+          "dynamics": "braking",
+          "count": 167,
+          "pct": 1.95
+        },
+        {
+          "token_id": 36,
+          "curvature": "gentle_curve",
+          "speed_zone": "fast",
+          "dynamics": "accelerating",
+          "count": 148,
+          "pct": 1.73
+        }
+      ]
+    },
+    "b5b236": {
+      "total_frames": 1810,
+      "curvature": {
+        "straight": {
+          "count": 944,
+          "pct": 52.15
+        },
+        "gentle_curve": {
+          "count": 441,
+          "pct": 24.36
+        },
+        "sharp_curve": {
+          "count": 425,
+          "pct": 23.48
+        }
+      },
+      "speed_zone": {
+        "stopped": {
+          "count": 410,
+          "pct": 22.65
+        },
+        "slow": {
+          "count": 418,
+          "pct": 23.09
+        },
+        "medium": {
+          "count": 969,
+          "pct": 53.54
+        },
+        "fast": {
+          "count": 13,
+          "pct": 0.72
+        }
+      },
+      "dynamics": {
+        "cruising": {
+          "count": 469,
+          "pct": 25.91
+        },
+        "accelerating": {
+          "count": 447,
+          "pct": 24.7
+        },
+        "braking": {
+          "count": 469,
+          "pct": 25.91
+        },
+        "stopped": {
+          "count": 398,
+          "pct": 21.99
+        },
+        "starting": {
+          "count": 27,
+          "pct": 1.49
+        }
+      },
+      "combined_unique": 28,
+      "combined_top10": [
+        {
+          "token_id": 3,
+          "curvature": "straight",
+          "speed_zone": "stopped",
+          "dynamics": "stopped",
+          "count": 381,
+          "pct": 21.05
+        },
+        {
+          "token_id": 10,
+          "curvature": "straight",
+          "speed_zone": "medium",
+          "dynamics": "cruising",
+          "count": 176,
+          "pct": 9.72
+        },
+        {
+          "token_id": 12,
+          "curvature": "straight",
+          "speed_zone": "medium",
+          "dynamics": "braking",
+          "count": 157,
+          "pct": 8.67
+        },
+        {
+          "token_id": 51,
+          "curvature": "sharp_curve",
+          "speed_zone": "medium",
+          "dynamics": "accelerating",
+          "count": 118,
+          "pct": 6.52
+        },
+        {
+          "token_id": 11,
+          "curvature": "straight",
+          "speed_zone": "medium",
+          "dynamics": "accelerating",
+          "count": 110,
+          "pct": 6.08
+        },
+        {
+          "token_id": 32,
+          "curvature": "gentle_curve",
+          "speed_zone": "medium",
+          "dynamics": "braking",
+          "count": 107,
+          "pct": 5.91
+        },
+        {
+          "token_id": 30,
+          "curvature": "gentle_curve",
+          "speed_zone": "medium",
+          "dynamics": "cruising",
+          "count": 105,
+          "pct": 5.8
+        },
+        {
+          "token_id": 31,
+          "curvature": "gentle_curve",
+          "speed_zone": "medium",
+          "dynamics": "accelerating",
+          "count": 92,
+          "pct": 5.08
+        },
+        {
+          "token_id": 46,
+          "curvature": "sharp_curve",
+          "speed_zone": "slow",
+          "dynamics": "accelerating",
+          "count": 77,
+          "pct": 4.25
+        },
+        {
+          "token_id": 50,
+          "curvature": "sharp_curve",
+          "speed_zone": "medium",
+          "dynamics": "cruising",
+          "count": 73,
+          "pct": 4.03
+        }
+      ]
+    },
+    "c48e71": {
+      "total_frames": 3115,
+      "curvature": {
+        "straight": {
+          "count": 1782,
+          "pct": 57.21
+        },
+        "gentle_curve": {
+          "count": 561,
+          "pct": 18.01
+        },
+        "sharp_curve": {
+          "count": 772,
+          "pct": 24.78
+        }
+      },
+      "speed_zone": {
+        "stopped": {
+          "count": 828,
+          "pct": 26.58
+        },
+        "slow": {
+          "count": 960,
+          "pct": 30.82
+        },
+        "medium": {
+          "count": 1296,
+          "pct": 41.61
+        },
+        "fast": {
+          "count": 31,
+          "pct": 1.0
+        }
+      },
+      "dynamics": {
+        "cruising": {
+          "count": 760,
+          "pct": 24.4
+        },
+        "accelerating": {
+          "count": 697,
+          "pct": 22.38
+        },
+        "braking": {
+          "count": 775,
+          "pct": 24.88
+        },
+        "stopped": {
+          "count": 800,
+          "pct": 25.68
+        },
+        "starting": {
+          "count": 83,
+          "pct": 2.66
+        }
+      },
+      "combined_unique": 31,
+      "combined_top10": [
+        {
+          "token_id": 3,
+          "curvature": "straight",
+          "speed_zone": "stopped",
+          "dynamics": "stopped",
+          "count": 748,
+          "pct": 24.01
+        },
+        {
+          "token_id": 12,
+          "curvature": "straight",
+          "speed_zone": "medium",
+          "dynamics": "braking",
+          "count": 263,
+          "pct": 8.44
+        },
+        {
+          "token_id": 10,
+          "curvature": "straight",
+          "speed_zone": "medium",
+          "dynamics": "cruising",
+          "count": 206,
+          "pct": 6.61
+        },
+        {
+          "token_id": 51,
+          "curvature": "sharp_curve",
+          "speed_zone": "medium",
+          "dynamics": "accelerating",
+          "count": 184,
+          "pct": 5.91
+        },
+        {
+          "token_id": 45,
+          "curvature": "sharp_curve",
+          "speed_zone": "slow",
+          "dynamics": "cruising",
+          "count": 155,
+          "pct": 4.98
+        },
+        {
+          "token_id": 5,
+          "curvature": "straight",
+          "speed_zone": "slow",
+          "dynamics": "cruising",
+          "count": 149,
+          "pct": 4.78
+        },
+        {
+          "token_id": 11,
+          "curvature": "straight",
+          "speed_zone": "medium",
+          "dynamics": "accelerating",
+          "count": 139,
+          "pct": 4.46
+        },
+        {
+          "token_id": 32,
+          "curvature": "gentle_curve",
+          "speed_zone": "medium",
+          "dynamics": "braking",
+          "count": 138,
+          "pct": 4.43
+        },
+        {
+          "token_id": 46,
+          "curvature": "sharp_curve",
+          "speed_zone": "slow",
+          "dynamics": "accelerating",
+          "count": 128,
+          "pct": 4.11
+        },
+        {
+          "token_id": 50,
+          "curvature": "sharp_curve",
+          "speed_zone": "medium",
+          "dynamics": "cruising",
+          "count": 111,
+          "pct": 3.56
+        }
+      ]
+    },
+    "736fcb": {
+      "total_frames": 3685,
+      "curvature": {
+        "straight": {
+          "count": 2532,
+          "pct": 68.71
+        },
+        "gentle_curve": {
+          "count": 484,
+          "pct": 13.13
+        },
+        "sharp_curve": {
+          "count": 669,
+          "pct": 18.15
+        }
+      },
+      "speed_zone": {
+        "stopped": {
+          "count": 1742,
+          "pct": 47.27
+        },
+        "slow": {
+          "count": 810,
+          "pct": 21.98
+        },
+        "medium": {
+          "count": 1109,
+          "pct": 30.09
+        },
+        "fast": {
+          "count": 24,
+          "pct": 0.65
+        }
+      },
+      "dynamics": {
+        "cruising": {
+          "count": 580,
+          "pct": 15.74
+        },
+        "accelerating": {
+          "count": 598,
+          "pct": 16.23
+        },
+        "braking": {
+          "count": 727,
+          "pct": 19.73
+        },
+        "stopped": {
+          "count": 1710,
+          "pct": 46.4
+        },
+        "starting": {
+          "count": 70,
+          "pct": 1.9
+        }
+      },
+      "combined_unique": 31,
+      "combined_top10": [
+        {
+          "token_id": 3,
+          "curvature": "straight",
+          "speed_zone": "stopped",
+          "dynamics": "stopped",
+          "count": 1689,
+          "pct": 45.83
+        },
+        {
+          "token_id": 12,
+          "curvature": "straight",
+          "speed_zone": "medium",
+          "dynamics": "braking",
+          "count": 236,
+          "pct": 6.4
+        },
+        {
+          "token_id": 10,
+          "curvature": "straight",
+          "speed_zone": "medium",
+          "dynamics": "cruising",
+          "count": 175,
+          "pct": 4.75
+        },
+        {
+          "token_id": 51,
+          "curvature": "sharp_curve",
+          "speed_zone": "medium",
+          "dynamics": "accelerating",
+          "count": 158,
+          "pct": 4.29
+        },
+        {
+          "token_id": 11,
+          "curvature": "straight",
+          "speed_zone": "medium",
+          "dynamics": "accelerating",
+          "count": 138,
+          "pct": 3.74
+        },
+        {
+          "token_id": 7,
+          "curvature": "straight",
+          "speed_zone": "slow",
+          "dynamics": "braking",
+          "count": 122,
+          "pct": 3.31
+        },
+        {
+          "token_id": 47,
+          "curvature": "sharp_curve",
+          "speed_zone": "slow",
+          "dynamics": "braking",
+          "count": 118,
+          "pct": 3.2
+        },
+        {
+          "token_id": 45,
+          "curvature": "sharp_curve",
+          "speed_zone": "slow",
+          "dynamics": "cruising",
+          "count": 117,
+          "pct": 3.18
+        },
+        {
+          "token_id": 46,
+          "curvature": "sharp_curve",
+          "speed_zone": "slow",
+          "dynamics": "accelerating",
+          "count": 115,
+          "pct": 3.12
+        },
+        {
+          "token_id": 32,
+          "curvature": "gentle_curve",
+          "speed_zone": "medium",
+          "dynamics": "braking",
+          "count": 104,
+          "pct": 2.82
+        }
+      ]
+    },
+    "8014dd": {
+      "total_frames": 1785,
+      "curvature": {
+        "straight": {
+          "count": 1034,
+          "pct": 57.93
+        },
+        "gentle_curve": {
+          "count": 365,
+          "pct": 20.45
+        },
+        "sharp_curve": {
+          "count": 386,
+          "pct": 21.62
+        }
+      },
+      "speed_zone": {
+        "stopped": {
+          "count": 723,
+          "pct": 40.5
+        },
+        "slow": {
+          "count": 196,
+          "pct": 10.98
+        },
+        "medium": {
+          "count": 731,
+          "pct": 40.95
+        },
+        "fast": {
+          "count": 135,
+          "pct": 7.56
+        }
+      },
+      "dynamics": {
+        "cruising": {
+          "count": 243,
+          "pct": 13.61
+        },
+        "accelerating": {
+          "count": 391,
+          "pct": 21.9
+        },
+        "braking": {
+          "count": 417,
+          "pct": 23.36
+        },
+        "stopped": {
+          "count": 710,
+          "pct": 39.78
+        },
+        "starting": {
+          "count": 24,
+          "pct": 1.34
+        }
+      },
+      "combined_unique": 35,
+      "combined_top10": [
+        {
+          "token_id": 3,
+          "curvature": "straight",
+          "speed_zone": "stopped",
+          "dynamics": "stopped",
+          "count": 694,
+          "pct": 38.88
+        },
+        {
+          "token_id": 12,
+          "curvature": "straight",
+          "speed_zone": "medium",
+          "dynamics": "braking",
+          "count": 122,
+          "pct": 6.83
+        },
+        {
+          "token_id": 51,
+          "curvature": "sharp_curve",
+          "speed_zone": "medium",
+          "dynamics": "accelerating",
+          "count": 118,
+          "pct": 6.61
+        },
+        {
+          "token_id": 32,
+          "curvature": "gentle_curve",
+          "speed_zone": "medium",
+          "dynamics": "braking",
+          "count": 96,
+          "pct": 5.38
+        },
+        {
+          "token_id": 31,
+          "curvature": "gentle_curve",
+          "speed_zone": "medium",
+          "dynamics": "accelerating",
+          "count": 94,
+          "pct": 5.27
+        },
+        {
+          "token_id": 30,
+          "curvature": "gentle_curve",
+          "speed_zone": "medium",
+          "dynamics": "cruising",
+          "count": 87,
+          "pct": 4.87
+        },
+        {
+          "token_id": 52,
+          "curvature": "sharp_curve",
+          "speed_zone": "medium",
+          "dynamics": "braking",
+          "count": 72,
+          "pct": 4.03
+        },
+        {
+          "token_id": 46,
+          "curvature": "sharp_curve",
+          "speed_zone": "slow",
+          "dynamics": "accelerating",
+          "count": 57,
+          "pct": 3.19
+        },
+        {
+          "token_id": 10,
+          "curvature": "straight",
+          "speed_zone": "medium",
+          "dynamics": "cruising",
+          "count": 50,
+          "pct": 2.8
+        },
+        {
+          "token_id": 11,
+          "curvature": "straight",
+          "speed_zone": "medium",
+          "dynamics": "accelerating",
+          "count": 49,
+          "pct": 2.75
+        }
+      ]
+    }
+  },
+  "aggregate": {
+    "total_frames": 18970,
+    "unique_tokens": 36,
+    "shared_tokens": 24,
+    "shared_token_ids": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10,
+      11,
+      12,
+      23,
+      26,
+      27,
+      30,
+      31,
+      32,
+      35,
+      36,
+      37,
+      45,
+      46,
+      47,
+      50,
+      51,
+      52
+    ]
+  }
+}
