@@ -1,0 +1,1796 @@
+{
+  "model": "/home/ktl/.stable_worldmodel/expA1/lewm_expA1_livlab_only_epoch_15_object.ckpt",
+  "num_accident": 100,
+  "num_non_accident": 25,
+  "pred_surprise": {
+    "accident_means": [
+      44.039389462815116,
+      164.0850838940553,
+      50.88557312169026,
+      49.631464928695834,
+      36.51309847094349,
+      41.32340941453343,
+      38.13743524453075,
+      50.72628158029884,
+      63.75204731719663,
+      47.40443308666499,
+      63.848685942974285,
+      451.9573730699944,
+      48.81126402845286,
+      44.95460364744835,
+      32.8086750592072,
+      166.91662948143664,
+      48.198431766394414,
+      48.113350625131645,
+      22.265485763549805,
+      41.89401637237084,
+      96.94945555985576,
+      25.6018448453961,
+      43.11393232443898,
+      24.776269548079547,
+      35.082458260133095,
+      93.90850194295247,
+      131.86578583471555,
+      23.215684340172206,
+      44.685021821617475,
+      26.59391255378723,
+      41.58819481322003,
+      29.996119354710434,
+      65.68638977859959,
+      35.77215080068569,
+      33.12644740788623,
+      35.6876511524633,
+      39.77791414357195,
+      99.72222837467784,
+      42.36434706461798,
+      40.90576396037623,
+      78.73638507017155,
+      484.6085940274325,
+      40.83274358691591,
+      124.79830079159494,
+      43.94095037401337,
+      30.544151404469282,
+      78.84413905979432,
+      36.449905198873935,
+      35.307734931867145,
+      29.066162448244047,
+      45.51378317553588,
+      50.46435317607841,
+      106.67317592736447,
+      32.225586094807106,
+      63.9114412924256,
+      34.83314964024707,
+      48.10967208399917,
+      48.10551476232784,
+      58.76584819832234,
+      28.218951038478576,
+      71.444885647174,
+      88.123802398062,
+      52.10316767837062,
+      252.00329094703753,
+      42.79610203221901,
+      310.4679116913767,
+      33.491805635317405,
+      151.27672565344608,
+      53.51549726544005,
+      46.63067685943289,
+      47.37078546740345,
+      97.12788595334447,
+      31.7826555618132,
+      28.735885934731396,
+      34.32948073161017,
+      25.054390582841695,
+      80.01228201509726,
+      74.45077668022864,
+      41.88050370363845,
+      83.68247149317398,
+      55.411423852601025,
+      52.09941622154,
+      45.2666761995566,
+      263.44746194426546,
+      64.96049066023393,
+      22.865094522033075,
+      36.88606647549547,
+      75.7762172524699,
+      50.966199932676375,
+      162.24801639595418,
+      140.18488170191185,
+      128.82511156343566,
+      63.081084182581954,
+      93.8095931621513,
+      49.71884095548379,
+      37.69011923279425,
+      82.68676586540379,
+      59.977659363107584,
+      448.8478623223059,
+      47.80705839334075
+    ],
+    "non_accident_means": [
+      70.84247003420435,
+      61.70623933426057,
+      50.73228673402428,
+      67.36817762586806,
+      30.78648246726409,
+      49.64145404776347,
+      56.77716103779901,
+      33.6083618221861,
+      50.5576694950913,
+      41.71409923861725,
+      95.32249128938925,
+      65.74301987464982,
+      49.74504819542471,
+      35.280764724269055,
+      69.89463401563239,
+      32.85560646442452,
+      61.79501751215771,
+      34.84645216114025,
+      43.99105620630009,
+      24.542420705159504,
+      58.0995685500328,
+      37.17880472510752,
+      58.4594711652262,
+      43.90799546604834,
+      51.738991766264945
+    ],
+    "pre_crash_ratios_2s": [
+      0.8381562880525594,
+      0.9618582812636236,
+      0.788548216507185,
+      1.1551458063106328,
+      0.8749142907357399,
+      1.0015065317519802,
+      1.1055413042722884,
+      1.0164365698018103,
+      0.9219360904358862,
+      0.6362881318569329,
+      0.6937671873873978,
+      1.642408424392152,
+      0.9698510814312599,
+      0.9995840758598351,
+      0.844368784535163,
+      1.0312679598489312,
+      1.1272211606584803,
+      1.1850123290339134,
+      0.7681102807243405,
+      1.5206134196669514,
+      2.3020055179976557,
+      2.627216952677599,
+      0.8591272859364368,
+      1.5002640987144493,
+      0.8202322246298936,
+      1.0709951403793627,
+      1.004159317148299,
+      0.7606193069228461,
+      0.8393012647017359,
+      1.056421138106822,
+      0.8891311562139542,
+      0.9479386670428225,
+      0.9928611182132115,
+      0.9365805234150494,
+      0.6158328950968528,
+      0.9740286874100935,
+      0.7730270509318561,
+      1.0407726740797887,
+      1.2644121051000794,
+      0.9754816252671306,
+      0.9719287709242093,
+      0.923031225101142,
+      1.1794812879242493,
+      0.8711204523009161,
+      1.0079058872264617,
+      1.3922567473678664,
+      0.9166820556061448,
+      1.4771667190414939,
+      0.6081656916662247,
+      1.0436666784094009,
+      1.854322409057215,
+      1.006081253916321,
+      0.4647719503760345,
+      0.8897807584875211,
+      0.44505920555908146,
+      1.188598378959804,
+      0.47522096567755334,
+      0.47018168599812016,
+      1.0601198267401555,
+      1.1337673142513773,
+      0.9153728268197023,
+      0.7598298832548988,
+      1.069641104993188,
+      1.0280251904104647,
+      1.0049236476952106,
+      0.9272079301458797,
+      1.2059464684366352,
+      0.7762150914325844,
+      1.1637653893221773,
+      0.9525214545268558,
+      3.246827310996775,
+      0.9190943935398969,
+      1.2002114749608581,
+      0.7259684692269278,
+      0.9662258377028167,
+      0.15769540699528983,
+      1.037924639186407,
+      1.0252969147148736,
+      1.0509300346283965
+    ]
+  },
+  "change_rate": {
+    "accident_means": [
+      6.891877320679751,
+      2.989685571558425,
+      1.923523188389913,
+      0.23215841114370508,
+      9.429896287845843,
+      2.1418719959150456,
+      14.936017468646922,
+      0.03060710917625947,
+      9.146617510467768,
+      0.36137314751954136,
+      6.460368335811478,
+      49.542133104503506,
+      5.145542134107091,
+      2.714129409527011,
+      2.1871964155892893,
+      1.8727329464526332,
+      0.9664732540616452,
+      0.11717517589792036,
+      3.1252012504264712,
+      0.996621983979762,
+      6.684341755734058,
+      1.4517280265665613,
+      8.478539065956467,
+      2.8988056565419984,
+      5.519427533797694,
+      11.80242551362142,
+      16.147572156575723,
+      5.020998655395075,
+      0.22238929372195426,
+      1.6792642966497178,
+      2.26353465169481,
+      0.9201738231128548,
+      31.63273210425424,
+      7.380002884119749,
+      4.319279691523406,
+      7.186144390171676,
+      1.5585330325171889,
+      15.676005166795369,
+      3.0766914526019433,
+      0.7618825616917074,
+      3.0271484436787137,
+      5.264361023306846,
+      2.7645524184151147,
+      0.1629363764077425,
+      1.3609792951381567,
+      2.670989422964854,
+      30.56249165319611,
+      6.43133540248917,
+      4.052164526675084,
+      4.657203725146027,
+      14.120328710566378,
+      7.914432633637916,
+      6.4699388158204965,
+      6.075656187908743,
+      4.467732849605381,
+      0.6011070773768006,
+      1.1036621010908396,
+      0.36587788736579396,
+      5.106923667732627,
+      4.995854362092837,
+      3.9081196208305733,
+      1.290053117480961,
+      0.0396976488529495,
+      16.514050021592993,
+      4.114747003750932,
+      3.3219357763184236,
+      2.355996169447899,
+      3.1025820462591946,
+      2.7521447724092174,
+      2.352650136094202,
+      0.9919674082684881,
+      8.888470408916474,
+      1.8298169871652499,
+      4.433424445023205,
+      13.197924850499163,
+      1.391812789420466,
+      1.5983353726565839,
+      30.211873517192977,
+      0.8042625921053094,
+      0.6133110831379329,
+      1.710859204039923,
+      11.034231467021987,
+      0.41115347160317467,
+      8.091690535207645,
+      3.247566129844636,
+      0.05340067893819651,
+      1.4392737230688484,
+      4.744718644493049,
+      2.190107786510955,
+      6.679407094332757,
+      2.6645117504810303,
+      3.9340909220764986,
+      2.6033851592023103,
+      2.616432942757383,
+      0.21524032943954807,
+      4.26255644960329,
+      26.704998716413975,
+      2.5887718329281366,
+      2.468051091212817,
+      0.902241011799285
+    ],
+    "non_accident_means": [
+      2.6958937153220175,
+      6.371823393246159,
+      3.188998294610474,
+      2.183813134045922,
+      6.054086234252058,
+      16.173710270963532,
+      25.450236733080914,
+      3.7581509913585616,
+      3.33676316447556,
+      3.891582592949271,
+      7.42137283116579,
+      0.8114782101009042,
+      2.879877203042852,
+      8.125899401786738,
+      10.057961390763522,
+      1.891052547469735,
+      27.062244822382926,
+      3.1350657761602396,
+      4.627951465020276,
+      1.6756405242718757,
+      0.10766548105777474,
+      3.9417994217574597,
+      1.267667590149084,
+      0.26451225995774097,
+      2.3613832007348536
+    ],
+    "pre_crash_ratios_2s": [
+      2.9778060761386955,
+      4.21452763546333,
+      0.25745932516772085,
+      3.1057669288701826,
+      0.8208053846793315,
+      1.3721359425618345,
+      0.8070015280588588,
+      1.2564357852703005,
+      0.007426625882260344,
+      7.2294157832525165,
+      1.800160273532756,
+      1.6062351673774182,
+      0.03652093761009379,
+      0.9927792188043962,
+      0.027328780618310292,
+      0.2502419278187972,
+      3.3407699849830745,
+      7.310499477144881,
+      0.021216052403038005,
+      0.35052810833901304,
+      179.10477678233357,
+      0.000519425496010564,
+      10.999411841824283,
+      0.46656124247836617,
+      0.18798450895701063,
+      6.227595891378473,
+      1.6195128380164974,
+      0.760357849576471,
+      0.047189001654657205,
+      0.005594091010063262,
+      1.101164880126894,
+      0.5684509471543576,
+      5.302180425072733,
+      0.04667562220492651,
+      9.698775615149436e-06,
+      0.47173471848896664,
+      0.7142185684236253,
+      1.3058195666502275,
+      0.21974926765595923,
+      1.5770710395207395,
+      0.0565395605086094,
+      1.2475663675589097,
+      0.5264782711182374,
+      1.224457954041768,
+      0.28099550414785607,
+      0.08262278234770683,
+      4.883104849030562,
+      18.176942134991684,
+      2.7649912390714007,
+      1.462368314052757,
+      0.15217331737325732,
+      4.4421277802069516e-05,
+      3.217715535013901,
+      0.010734092312910792,
+      0.0016064683872011902,
+      0.6385609950480512,
+      0.9276546275081733,
+      0.03273280720856214,
+      1.0237817108502762e-06,
+      0.8033268068482906,
+      2.3265544697961875,
+      0.03790563469525375,
+      3.0588905167652842,
+      0.2530591728073145,
+      4.1525978803973524,
+      1.194560587130822,
+      7.097294053039964,
+      0.605649971311344,
+      1.4593160607095723,
+      0.002254093487918219,
+      0.9637992176965728,
+      6.93085347949865e-07,
+      3.076639487336467,
+      7.247177004911457,
+      0.9392800290206491,
+      0.07279049561225587,
+      0.10242709977558086,
+      0.13870273692884696,
+      5.961838810298056
+    ]
+  },
+  "window_analysis": {
+    "1": {
+      "pred_ratio_median": 1.0002904907875774,
+      "pred_ratio_mean": 1.154783981419356,
+      "pred_pct_above_1": 50.79365079365079,
+      "cr_ratio_median": 1.0522328108587562,
+      "cr_ratio_mean": 9.262716933196687,
+      "cr_pct_above_1": 52.38095238095239,
+      "n_videos": 63
+    },
+    "2": {
+      "pred_ratio_median": 1.0026631178286356,
+      "pred_ratio_mean": 1.0932761562624282,
+      "pred_pct_above_1": 53.03030303030303,
+      "cr_ratio_median": 0.9318904766115439,
+      "cr_ratio_mean": 5.128855958672361,
+      "cr_pct_above_1": 48.484848484848484,
+      "n_videos": 66
+    },
+    "3": {
+      "pred_ratio_median": 1.0023332139477557,
+      "pred_ratio_mean": 1.0765006145420521,
+      "pred_pct_above_1": 51.515151515151516,
+      "cr_ratio_median": 1.0707805165186897,
+      "cr_ratio_mean": 3.92816190651654,
+      "cr_pct_above_1": 51.515151515151516,
+      "n_videos": 66
+    },
+    "5": {
+      "pred_ratio_median": 1.0086071044788314,
+      "pred_ratio_mean": 1.0876456906182725,
+      "pred_pct_above_1": 56.52173913043478,
+      "cr_ratio_median": 1.1810490549799988,
+      "cr_ratio_mean": 3.160988969943241,
+      "cr_pct_above_1": 56.52173913043478,
+      "n_videos": 69
+    }
+  },
+  "per_video": [
+    {
+      "video": "20190312_SEQ_S_F_D_1_O_1_0",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 44.039389462815116,
+      "change_rate_mean": 6.891877320679751,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        2.78
+      ]
+    },
+    {
+      "video": "20210601_SEQ_S_F_D_1_H_5",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 164.0850838940553,
+      "change_rate_mean": 2.989685571558425,
+      "collision_type": "rear_end",
+      "collision_times": [
+        6.69
+      ]
+    },
+    {
+      "video": "20180208_SEQ_S_F_N_1_O_1_1",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 50.88557312169026,
+      "change_rate_mean": 1.923523188389913,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        4.16
+      ]
+    },
+    {
+      "video": "20191028_SEQ_S_F_D_1_H_5",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 49.631464928695834,
+      "change_rate_mean": 0.23215841114370508,
+      "collision_type": "rear_end",
+      "collision_times": [
+        4.7
+      ]
+    },
+    {
+      "video": "20180521_SEQ_S_F_D_3_O_1_1",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 36.51309847094349,
+      "change_rate_mean": 9.429896287845843,
+      "collision_type": "rear_end",
+      "collision_times": [
+        5.14
+      ]
+    },
+    {
+      "video": "20201027_SEQ_S_F_D_1_O_1_8",
+      "label": "accident",
+      "duration": 20.0,
+      "pred_surprise_mean": 41.32340941453343,
+      "change_rate_mean": 2.1418719959150456,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        9.79
+      ]
+    },
+    {
+      "video": "20181117_SEQ_S_F_D_1_O_1_8b",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 38.13743524453075,
+      "change_rate_mean": 14.936017468646922,
+      "collision_type": "rear_end",
+      "collision_times": [
+        6.46
+      ]
+    },
+    {
+      "video": "20220704_SEQ_S_F_N_1_H_1_9.p",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 50.72628158029884,
+      "change_rate_mean": 0.03060710917625947,
+      "collision_type": "rear_end",
+      "collision_times": [
+        10.2
+      ]
+    },
+    {
+      "video": "20170228_SEQ_S_F_D_3_O_1_8",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 63.75204731719663,
+      "change_rate_mean": 9.146617510467768,
+      "collision_type": "rear_end",
+      "collision_times": [
+        9.13
+      ]
+    },
+    {
+      "video": "20161218_SEQ_S_F_D_1_H_1_6",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 47.40443308666499,
+      "change_rate_mean": 0.36137314751954136,
+      "collision_type": "rear_end",
+      "collision_times": [
+        9.72
+      ]
+    },
+    {
+      "video": "20180203_SEQ_S_F_N_1_O_1_0",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 63.848685942974285,
+      "change_rate_mean": 6.460368335811478,
+      "collision_type": "rear_end",
+      "collision_times": [
+        10.79
+      ]
+    },
+    {
+      "video": "20170424_SEQ_S_F_D_1_O_1_1",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 451.9573730699944,
+      "change_rate_mean": 49.542133104503506,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        17.83
+      ]
+    },
+    {
+      "video": "20220706_SEQ_S_F_D_1_O_1_6.p",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 48.81126402845286,
+      "change_rate_mean": 5.145542134107091,
+      "collision_type": "rear_end",
+      "collision_times": [
+        11.12
+      ]
+    },
+    {
+      "video": "20190918_SEQ_S_F_D_1_O_1_0",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 44.95460364744835,
+      "change_rate_mean": 2.714129409527011,
+      "collision_type": "rear_end",
+      "collision_times": [
+        3.17
+      ]
+    },
+    {
+      "video": "20210902_SEQ_S_F_D_3_O_3",
+      "label": "accident",
+      "duration": 20.0,
+      "pred_surprise_mean": 32.8086750592072,
+      "change_rate_mean": 2.1871964155892893,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        3.62
+      ]
+    },
+    {
+      "video": "20230530_SEQ_S_F_D_3_O_1_8",
+      "label": "accident",
+      "duration": 20.0,
+      "pred_surprise_mean": 164.41288003921508,
+      "change_rate_mean": 1.86336928172037,
+      "collision_type": "rear_end",
+      "collision_times": [
+        17.53
+      ]
+    },
+    {
+      "video": "20170126_SEQ_S_R_N_1_O_1_6",
+      "label": "accident",
+      "duration": 10.2,
+      "pred_surprise_mean": 48.198431766394414,
+      "change_rate_mean": 0.9664732540616452,
+      "collision_type": "rear_end",
+      "collision_times": [
+        9.32
+      ]
+    },
+    {
+      "video": "20170125_SEQ_S_F_N_1_O_1_1",
+      "label": "accident",
+      "duration": 10.5,
+      "pred_surprise_mean": 48.113350625131645,
+      "change_rate_mean": 0.11717517589792036,
+      "collision_type": "rear_end",
+      "collision_times": [
+        10.1
+      ]
+    },
+    {
+      "video": "20181030_SEQ_S_F_D_1_O_1_6d",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 22.265485763549805,
+      "change_rate_mean": 3.1252012504264712,
+      "collision_type": "rear_end",
+      "collision_times": [
+        10.77
+      ]
+    },
+    {
+      "video": "20201220_SEQ_S_F_N_3_O_1_6",
+      "label": "accident",
+      "duration": 20.0,
+      "pred_surprise_mean": 41.89401637237084,
+      "change_rate_mean": 0.996621983979762,
+      "collision_type": "head_on",
+      "collision_times": [
+        8.18
+      ]
+    },
+    {
+      "video": "20230817_SEQ_S_F_D_1_O_1_1",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 96.94945555985576,
+      "change_rate_mean": 6.684341755734058,
+      "collision_type": "head_on",
+      "collision_times": [
+        10.28
+      ]
+    },
+    {
+      "video": "20210710_SEQ_S_F_D_1_O_4",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 25.6018448453961,
+      "change_rate_mean": 1.4517280265665613,
+      "collision_type": "rear_end",
+      "collision_times": [
+        11.92
+      ]
+    },
+    {
+      "video": "20180325_SEQ_S_F_D_1_O_1_3",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 43.11393232443898,
+      "change_rate_mean": 8.478539065956467,
+      "collision_type": "rear_end",
+      "collision_times": [
+        9.18
+      ]
+    },
+    {
+      "video": "20170112_SEQ_S_F_D_1_O_1_8",
+      "label": "accident",
+      "duration": 10.5,
+      "pred_surprise_mean": 24.06837613242013,
+      "change_rate_mean": 2.871197983622551,
+      "collision_type": "rear_end",
+      "collision_times": [
+        4.95
+      ]
+    },
+    {
+      "video": "20191104_SEQ_S_F_D_1_O_4",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 35.082458260133095,
+      "change_rate_mean": 5.519427533797694,
+      "collision_type": "rear_end",
+      "collision_times": [
+        4.22
+      ]
+    },
+    {
+      "video": "20230628_SEQ_S_F_D_1_O_1_9",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 92.50688251096811,
+      "change_rate_mean": 11.743706978727781,
+      "collision_type": "rear_end",
+      "collision_times": [
+        9.36
+      ]
+    },
+    {
+      "video": "20170105_SEQ_S_F_D_1_O_1_8d",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 127.90981225967407,
+      "change_rate_mean": 15.986096435009967,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        10.35
+      ]
+    },
+    {
+      "video": "20181009_SEQ_S_F_D_1_O_1_0",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 23.215684340172206,
+      "change_rate_mean": 5.020998655395075,
+      "collision_type": "head_on",
+      "collision_times": [
+        3.05
+      ]
+    },
+    {
+      "video": "20190115_SEQ_S_F_D_1_H_1_0",
+      "label": "accident",
+      "duration": 20.0,
+      "pred_surprise_mean": 44.685021821617475,
+      "change_rate_mean": 0.22238929372195426,
+      "collision_type": "rear_end",
+      "collision_times": [
+        7.89
+      ]
+    },
+    {
+      "video": "20190417_SEQ_S_F_D_3_H_1_1",
+      "label": "accident",
+      "duration": 10.3,
+      "pred_surprise_mean": 26.59391255378723,
+      "change_rate_mean": 1.6792642966497178,
+      "collision_type": "head_on",
+      "collision_times": [
+        5.87
+      ]
+    },
+    {
+      "video": "20210129_SEQ_S_F_D_1_O_1_6b",
+      "label": "accident",
+      "duration": 20.0,
+      "pred_surprise_mean": 41.58819481322003,
+      "change_rate_mean": 2.26353465169481,
+      "collision_type": "rear_end",
+      "collision_times": [
+        14.62
+      ]
+    },
+    {
+      "video": "20210928_SEQ_S_F_N_1_O_1_8",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 29.996119354710434,
+      "change_rate_mean": 0.9201738231128548,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        4.8
+      ]
+    },
+    {
+      "video": "20170313_SEQ_S_F_D_1_O_1_9",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 65.68638977859959,
+      "change_rate_mean": 31.63273210425424,
+      "collision_type": "rear_end",
+      "collision_times": [
+        7.86
+      ]
+    },
+    {
+      "video": "20220820_SEQ_S_F_D_1_O_1_8a",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 35.77215080068569,
+      "change_rate_mean": 7.380002884119749,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        15.99
+      ]
+    },
+    {
+      "video": "20170315_SEQ_S_F_D_1_O_1_7",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 33.12644740788623,
+      "change_rate_mean": 4.319279691523406,
+      "collision_type": "rear_end",
+      "collision_times": [
+        5.33
+      ]
+    },
+    {
+      "video": "20170515_SEQ_S_F_D_1_O_1_2",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 35.6876511524633,
+      "change_rate_mean": 7.186144390171676,
+      "collision_type": "head_on",
+      "collision_times": [
+        9.97
+      ]
+    },
+    {
+      "video": "20230529_SEQ_S_F_D_1_O_1_4",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 39.77791414357195,
+      "change_rate_mean": 1.5585330325171889,
+      "collision_type": "rear_end",
+      "collision_times": [
+        3.59
+      ]
+    },
+    {
+      "video": "20190405_SEQ_S_F_D_1_O_1_1a",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 99.72222837467784,
+      "change_rate_mean": 15.676005166795369,
+      "collision_type": "rear_end",
+      "collision_times": [
+        4.26
+      ]
+    },
+    {
+      "video": "20190903_SEQ_S_F_D_1_O_1_2",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 42.36434706461798,
+      "change_rate_mean": 3.0766914526019433,
+      "collision_type": "rear_end",
+      "collision_times": [
+        19
+      ]
+    },
+    {
+      "video": "20170314_SEQ_S_F_N_1_O_5",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 40.90576396037623,
+      "change_rate_mean": 0.7618825616917074,
+      "collision_type": "head_on",
+      "collision_times": [
+        3.85
+      ]
+    },
+    {
+      "video": "20180924_SEQ_S_F_D_1_O_1_0",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 78.73638507017155,
+      "change_rate_mean": 3.0271484436787137,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        14.23
+      ]
+    },
+    {
+      "video": "20160430_SEQ_S_F_D_1_O_1_8",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 484.6085940274325,
+      "change_rate_mean": 5.264361023306846,
+      "collision_type": "rear_end",
+      "collision_times": [
+        17.59
+      ]
+    },
+    {
+      "video": "20211104_SEQ_S_F_D_1_O_1_8",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 40.83274358691591,
+      "change_rate_mean": 2.7645524184151147,
+      "collision_type": "rear_end",
+      "collision_times": [
+        15.7
+      ]
+    },
+    {
+      "video": "20161229_SEQ_S_F_D_1_O_1_8b",
+      "label": "accident",
+      "duration": 6.2,
+      "pred_surprise_mean": 124.79830079159494,
+      "change_rate_mean": 0.1629363764077425,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        4.23
+      ]
+    },
+    {
+      "video": "20191026_SEQ_S_F_N_1_H_5",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 43.94095037401337,
+      "change_rate_mean": 1.3609792951381567,
+      "collision_type": "rear_end",
+      "collision_times": [
+        7.29
+      ]
+    },
+    {
+      "video": "20190710_SEQ_S_F_D_1_O_3",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 30.544151404469282,
+      "change_rate_mean": 2.670989422964854,
+      "collision_type": "rear_end",
+      "collision_times": [
+        9.93
+      ]
+    },
+    {
+      "video": "20170807_SEQ_S_F_D_1_O_1_9b",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 78.84413905979432,
+      "change_rate_mean": 30.56249165319611,
+      "collision_type": "rear_end",
+      "collision_times": [
+        9.57
+      ]
+    },
+    {
+      "video": "20191021_SEQ_S_F_D_1_O_1_1",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 36.449905198873935,
+      "change_rate_mean": 6.43133540248917,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        4.47
+      ]
+    },
+    {
+      "video": "20190731_SEQ_S_F_D_1_H_1_8",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 35.307734931867145,
+      "change_rate_mean": 4.052164526675084,
+      "collision_type": "rear_end",
+      "collision_times": [
+        18.09
+      ]
+    },
+    {
+      "video": "20181222_SEQ_S_F_D_1_O_1_0a",
+      "label": "accident",
+      "duration": 20.0,
+      "pred_surprise_mean": 29.066162448244047,
+      "change_rate_mean": 4.657203725146027,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        9.32
+      ]
+    },
+    {
+      "video": "20170424_SEQ_S_F_D_1_O_1_8",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 45.51378317553588,
+      "change_rate_mean": 14.120328710566378,
+      "collision_type": "rear_end",
+      "collision_times": [
+        17.31
+      ]
+    },
+    {
+      "video": "20170328_SEQ_S_F_D_1_O_1_1",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 50.46435317607841,
+      "change_rate_mean": 7.914432633637916,
+      "collision_type": "rear_end",
+      "collision_times": [
+        10.6
+      ]
+    },
+    {
+      "video": "20230708_SEQ_S_F_D_1_O_1_8",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 106.67317592736447,
+      "change_rate_mean": 6.4699388158204965,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        4.34
+      ]
+    },
+    {
+      "video": "20170714_SEQ_S_F_D_1_O_1_9b",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 31.25881851196289,
+      "change_rate_mean": 6.014899626029655,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        13.9
+      ]
+    },
+    {
+      "video": "20170521_SEQ_S_F_D_3_O_1_6",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 63.9114412924256,
+      "change_rate_mean": 4.467732849605381,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        16.64
+      ]
+    },
+    {
+      "video": "20230621_SEQ_S_F_D_1_O_4",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 34.83314964024707,
+      "change_rate_mean": 0.6011070773768006,
+      "collision_type": "rear_end",
+      "collision_times": [
+        9.15
+      ]
+    },
+    {
+      "video": "20170203_SEQ_S_F_N_1_O_1_4",
+      "label": "accident",
+      "duration": 10.2,
+      "pred_surprise_mean": 46.69468172858743,
+      "change_rate_mean": 1.0928418844134784,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        15.22
+      ]
+    },
+    {
+      "video": "20180312_SEQ_S_F_N_1_O_1_6",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 48.10551476232784,
+      "change_rate_mean": 0.36587788736579396,
+      "collision_type": "rear_end",
+      "collision_times": [
+        10.29
+      ]
+    },
+    {
+      "video": "20170618_SEQ_S_F_D_3_O_1_2",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 58.76584819832234,
+      "change_rate_mean": 5.106923667732627,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        9.62
+      ]
+    },
+    {
+      "video": "20170904_SEQ_S_F_D_3_O_1_1",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 28.218951038478576,
+      "change_rate_mean": 4.995854362092837,
+      "collision_type": "rear_end",
+      "collision_times": [
+        10.19
+      ]
+    },
+    {
+      "video": "20181119_SEQ_S_F_D_1_O_1_6c",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 69.30153907775879,
+      "change_rate_mean": 3.8690384246222673,
+      "collision_type": "rear_end",
+      "collision_times": [
+        14.53
+      ]
+    },
+    {
+      "video": "20230721_SEQ_S_F_D_1_O_1_2.p",
+      "label": "accident",
+      "duration": 20.0,
+      "pred_surprise_mean": 88.123802398062,
+      "change_rate_mean": 1.290053117480961,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        15.26
+      ]
+    },
+    {
+      "video": "20230123_SEQ_S_F_N_1_O_1_8_1",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 52.10316767837062,
+      "change_rate_mean": 0.0396976488529495,
+      "collision_type": "rear_end",
+      "collision_times": [
+        10.35
+      ]
+    },
+    {
+      "video": "20221026_SEQ_S_F_D_1_O_1_8",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 248.24204779857428,
+      "change_rate_mean": 16.431890568749246,
+      "collision_type": "rear_end",
+      "collision_times": [
+        2.99
+      ]
+    },
+    {
+      "video": "20180828_SEQ_S_F_D_1_H_1_8",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 42.79610203221901,
+      "change_rate_mean": 4.114747003750932,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        8.91
+      ]
+    },
+    {
+      "video": "20230824_SEQ_S_F_D_3_O_3",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 310.4679116913767,
+      "change_rate_mean": 3.3219357763184236,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        13.8
+      ]
+    },
+    {
+      "video": "20170211_SEQ_S_F_N_1_O_1_6",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 33.491805635317405,
+      "change_rate_mean": 2.355996169447899,
+      "collision_type": "rear_end",
+      "collision_times": [
+        10.12
+      ]
+    },
+    {
+      "video": "20170320_SEQ_S_F_D_1_O_1_8a",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 151.27672565344608,
+      "change_rate_mean": 3.1025820462591946,
+      "collision_type": "rear_end",
+      "collision_times": [
+        10.37
+      ]
+    },
+    {
+      "video": "20210424_SEQ_S_F_D_1_H_1_6",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 53.51549726544005,
+      "change_rate_mean": 2.7521447724092174,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        5.16
+      ]
+    },
+    {
+      "video": "20191024_SEQ_S_F_D_1_O_1_6c",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 45.2317565536499,
+      "change_rate_mean": 2.32912363473326,
+      "collision_type": "rear_end",
+      "collision_times": [
+        4.52
+      ]
+    },
+    {
+      "video": "20180704_SEQ_S_F_N_1_O_1_0b",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 47.37078546740345,
+      "change_rate_mean": 0.9919674082684881,
+      "collision_type": "rear_end",
+      "collision_times": [
+        9.94
+      ]
+    },
+    {
+      "video": "20231026_SEQ_S_F_D_1_H_1_6",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 97.12788595334447,
+      "change_rate_mean": 8.888470408916474,
+      "collision_type": "rear_end",
+      "collision_times": [
+        19.11
+      ]
+    },
+    {
+      "video": "20230815_SEQ_S_F_D_3_O_1_8",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 31.3082875683533,
+      "change_rate_mean": 1.8207134200649253,
+      "collision_type": "unclear",
+      "collision_times": [
+        2.64
+      ]
+    },
+    {
+      "video": "20170830_SEQ_S_F_D_3_O_1_7b",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 28.735885934731396,
+      "change_rate_mean": 4.433424445023205,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        6.76
+      ]
+    },
+    {
+      "video": "20200325_SEQ_S_F_N_1_O_1_7",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 34.32948073161017,
+      "change_rate_mean": 13.197924850499163,
+      "collision_type": "head_on",
+      "collision_times": [
+        7.5
+      ]
+    },
+    {
+      "video": "20190321_SEQ_S_F_D_1_O_1_8a",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 25.054390582841695,
+      "change_rate_mean": 1.391812789420466,
+      "collision_type": "rear_end",
+      "collision_times": [
+        5.04
+      ]
+    },
+    {
+      "video": "20120808_SEQ_S_F_D_3_H_1_6",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 80.01228201509726,
+      "change_rate_mean": 1.5983353726565839,
+      "collision_type": "rear_end",
+      "collision_times": [
+        9.54,
+        10.58,
+        11.43
+      ]
+    },
+    {
+      "video": "20170504_SEQ_S_F_D_1_O_1_1",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 74.45077668022864,
+      "change_rate_mean": 30.211873517192977,
+      "collision_type": "rear_end",
+      "collision_times": [
+        10.86
+      ]
+    },
+    {
+      "video": "20171025_SEQ_S_F_N_1_O_2",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 41.88050370363845,
+      "change_rate_mean": 0.8042625921053094,
+      "collision_type": "rear_end",
+      "collision_times": [
+        9.62
+      ]
+    },
+    {
+      "video": "20200826_SEQ_D_F_D_1_H_1_6",
+      "label": "accident",
+      "duration": 20.0,
+      "pred_surprise_mean": 83.68247149317398,
+      "change_rate_mean": 0.6133110831379329,
+      "collision_type": "head_on",
+      "collision_times": [
+        7.53
+      ]
+    },
+    {
+      "video": "20190126_SEQ_S_F_D_1_O_1_8a",
+      "label": "accident",
+      "duration": 20.0,
+      "pred_surprise_mean": 55.411423852601025,
+      "change_rate_mean": 1.710859204039923,
+      "collision_type": "rear_end",
+      "collision_times": [
+        8.77
+      ]
+    },
+    {
+      "video": "20171021_SEQ_S_F_D_1_H_1_7",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 52.09941622154,
+      "change_rate_mean": 11.034231467021987,
+      "collision_type": "head_on",
+      "collision_times": [
+        6.12
+      ]
+    },
+    {
+      "video": "20170807_SEQ_S_F_N_1_O_1_4",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 45.2666761995566,
+      "change_rate_mean": 0.41115347160317467,
+      "collision_type": "rear_end",
+      "collision_times": [
+        9.73
+      ]
+    },
+    {
+      "video": "20170626_SEQ_S_F_D_3_H_1_7",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 255.5440380859375,
+      "change_rate_mean": 8.010773629855569,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        3.97
+      ]
+    },
+    {
+      "video": "20220811_SEQ_S_F_D_3_O_1_1",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 64.96049066023393,
+      "change_rate_mean": 3.247566129844636,
+      "collision_type": "rear_end",
+      "collision_times": [
+        9.61
+      ]
+    },
+    {
+      "video": "20220304_SEQ_S_F_N_3_O_3",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 22.865094522033075,
+      "change_rate_mean": 0.05340067893819651,
+      "collision_type": "head_on",
+      "collision_times": [
+        11.56
+      ]
+    },
+    {
+      "video": "20190214_SEQ_S_F_D_1_O_3a",
+      "label": "accident",
+      "duration": 20.0,
+      "pred_surprise_mean": 36.88606647549547,
+      "change_rate_mean": 1.4392737230688484,
+      "collision_type": "rear_end",
+      "collision_times": [
+        9.08
+      ]
+    },
+    {
+      "video": "20200804_SEQ_D_F_D_1_O_1_7",
+      "label": "accident",
+      "duration": 20.0,
+      "pred_surprise_mean": 75.7762172524699,
+      "change_rate_mean": 4.744718644493049,
+      "collision_type": "rear_end",
+      "collision_times": [
+        10.31
+      ]
+    },
+    {
+      "video": "20230922_SEQ_S_F_N_3_O_1_0",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 50.966199932676375,
+      "change_rate_mean": 2.190107786510955,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        16.47
+      ]
+    },
+    {
+      "video": "20170716_SEQ_S_F_D_1_H_1_9",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 162.24801639595418,
+      "change_rate_mean": 6.679407094332757,
+      "collision_type": "head_on",
+      "collision_times": [
+        7.83
+      ]
+    },
+    {
+      "video": "20170508_SEQ_S_F_D_1_O_1_0",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 140.18488170191185,
+      "change_rate_mean": 2.6645117504810303,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        8.99
+      ]
+    },
+    {
+      "video": "20230220_SEQ_S_F_D_3_H_5",
+      "label": "accident",
+      "duration": 20.0,
+      "pred_surprise_mean": 126.89273488998413,
+      "change_rate_mean": 3.914420467466116,
+      "collision_type": "unclear",
+      "collision_times": [
+        9.14
+      ]
+    },
+    {
+      "video": "20170627_SEQ_S_F_D_3_O_3",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 63.081084182581954,
+      "change_rate_mean": 2.6033851592023103,
+      "collision_type": "rear_end",
+      "collision_times": [
+        11.01
+      ]
+    },
+    {
+      "video": "20220418_SEQ_S_F_D_1_O_1_8a",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 93.8095931621513,
+      "change_rate_mean": 2.616432942757383,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        10.27
+      ]
+    },
+    {
+      "video": "20220309_SEQ_S_F_D_1_O_3",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 49.71884095548379,
+      "change_rate_mean": 0.21524032943954807,
+      "collision_type": "rear_end",
+      "collision_times": [
+        5.08
+      ]
+    },
+    {
+      "video": "20170605_SEQ_S_F_D_1_O_4",
+      "label": "accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 37.69011923279425,
+      "change_rate_mean": 4.26255644960329,
+      "collision_type": "rear_end",
+      "collision_times": [
+        9.98
+      ]
+    },
+    {
+      "video": "20200129_SEQ_S_F_D_1_H_1_9",
+      "label": "accident",
+      "duration": 10.1,
+      "pred_surprise_mean": 82.68676586540379,
+      "change_rate_mean": 26.704998716413975,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        5.83
+      ]
+    },
+    {
+      "video": "20170402_SEQ_S_F_D_1_O_1_4",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 59.977659363107584,
+      "change_rate_mean": 2.5887718329281366,
+      "collision_type": "rear_end",
+      "collision_times": [
+        11.1
+      ]
+    },
+    {
+      "video": "20171106_SEQ_S_F_D_1_O_1_7a",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 448.8478623223059,
+      "change_rate_mean": 2.468051091212817,
+      "collision_type": "side_swipe",
+      "collision_times": [
+        8.27
+      ]
+    },
+    {
+      "video": "20180826_SEQ_S_F_N_3_O_5",
+      "label": "accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 47.80705839334075,
+      "change_rate_mean": 0.902241011799285,
+      "collision_type": "head_on",
+      "collision_times": [
+        4.72
+      ]
+    },
+    {
+      "video": "20211226_SEQ_S_F_D_1_O_1_9",
+      "label": "non_accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 70.84247003420435,
+      "change_rate_mean": 2.6958937153220175,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20230523_SEQ_S_F_N_1_O_2",
+      "label": "non_accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 61.70623933426057,
+      "change_rate_mean": 6.371823393246159,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20201026_SEQ_S_F_D_1_O_1_0",
+      "label": "non_accident",
+      "duration": 20.0,
+      "pred_surprise_mean": 50.73228673402428,
+      "change_rate_mean": 3.188998294610474,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20210924_SEQ_S_F_D_1_O_1_1",
+      "label": "non_accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 67.36817762586806,
+      "change_rate_mean": 2.183813134045922,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20211007_SEQ_S_F_D_1_O_1_9b",
+      "label": "non_accident",
+      "duration": 20.0,
+      "pred_surprise_mean": 30.78648246726409,
+      "change_rate_mean": 6.054086234252058,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20130927_SEQ_S_F_D_3_O_1_6",
+      "label": "non_accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 49.64145404776347,
+      "change_rate_mean": 16.173710270963532,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20200729_SEQ_D_F_N_1_O_5",
+      "label": "non_accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 56.77716103779901,
+      "change_rate_mean": 25.450236733080914,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20221208_SEQ_S_F_D_1_O_1_9a",
+      "label": "non_accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 33.6083618221861,
+      "change_rate_mean": 3.7581509913585616,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20210603_SEQ_S_F_D_3_O_1_7",
+      "label": "non_accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 50.5576694950913,
+      "change_rate_mean": 3.33676316447556,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20221216_SEQ_S_F_N_1_O_3a",
+      "label": "non_accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 41.71409923861725,
+      "change_rate_mean": 3.891582592949271,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20231010_SEQ_S_F_D_1_O_1_1",
+      "label": "non_accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 95.32249128938925,
+      "change_rate_mean": 7.42137283116579,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20231002_SEQ_S_F_D_1_O_1_8",
+      "label": "non_accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 65.74301987464982,
+      "change_rate_mean": 0.8114782101009042,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20210503_SEQ_S_F_D_1_O_1_9",
+      "label": "non_accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 49.74504819542471,
+      "change_rate_mean": 2.879877203042852,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20210907_SEQ_S_F_D_1_O_1_1",
+      "label": "non_accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 35.280764724269055,
+      "change_rate_mean": 8.125899401786738,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20211203_SEQ_S_F_D_3_O_5",
+      "label": "non_accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 69.89463401563239,
+      "change_rate_mean": 10.057961390763522,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20220101_SEQ_S_F_D_1_H_1_9",
+      "label": "non_accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 32.85560646442452,
+      "change_rate_mean": 1.891052547469735,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20230603_SEQ_S_F_D_3_O_1_2",
+      "label": "non_accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 61.79501751215771,
+      "change_rate_mean": 27.062244822382926,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20190216_SEQ_S_F_D_1_O_1_1",
+      "label": "non_accident",
+      "duration": 20.0,
+      "pred_surprise_mean": 34.84645216114025,
+      "change_rate_mean": 3.1350657761602396,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20170616_SEQ_S_F_D_3_H_1_9",
+      "label": "non_accident",
+      "duration": 10.0,
+      "pred_surprise_mean": 43.99105620630009,
+      "change_rate_mean": 4.627951465020276,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20210419_SEQ_S_F_D_3_O_5",
+      "label": "non_accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 24.542420705159504,
+      "change_rate_mean": 1.6756405242718757,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20210812_SEQ_S_F_D_3_O_2",
+      "label": "non_accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 58.0995685500328,
+      "change_rate_mean": 0.10766548105777474,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20230515_SEQ_S_F_D_3_O_5",
+      "label": "non_accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 37.17880472510752,
+      "change_rate_mean": 3.9417994217574597,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20230608_SEQ_S_F_D_1_O_1_9c",
+      "label": "non_accident",
+      "duration": 20.0,
+      "pred_surprise_mean": 58.4594711652262,
+      "change_rate_mean": 1.267667590149084,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20230330_SEQ_S_F_N_1_O_1_9",
+      "label": "non_accident",
+      "duration": 20.0,
+      "pred_surprise_mean": 43.90799546604834,
+      "change_rate_mean": 0.26451225995774097,
+      "collision_type": null,
+      "collision_times": null
+    },
+    {
+      "video": "20210819_SEQ_S_F_D_3_O_1_9",
+      "label": "non_accident",
+      "duration": 20.1,
+      "pred_surprise_mean": 51.738991766264945,
+      "change_rate_mean": 2.3613832007348536,
+      "collision_type": null,
+      "collision_times": null
+    }
+  ]
+}

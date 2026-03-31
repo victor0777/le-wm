@@ -26,8 +26,13 @@ SEGMENTS_PATH = Path("/home/ktl/projects/rtb-vlm/experiments/exp10_segments/resu
 
 
 def load_model(ckpt_path: str, device: str = "cuda"):
+    import sys
+    import __main__
     try:
-        from train_vp import LaneDecoder, DepthDecoder  # noqa
+        from train_vp import LaneDecoder, DepthDecoder
+        # Register in __main__ so torch.load unpickler can find them
+        __main__.LaneDecoder = LaneDecoder
+        __main__.DepthDecoder = DepthDecoder
     except ImportError:
         pass
     model = torch.load(ckpt_path, map_location=device, weights_only=False)

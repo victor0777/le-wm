@@ -208,3 +208,36 @@
 - Short-horizon (0.5s)이 가장 강한 anomaly signal (gap 58% vs 30% at 2.5s)
 - Top surprise moments: 교차로 진입, 좌회전, 갑작스러운 장면 변화
 **영향**: route-specific anomaly detection의 기반 확보. Surprise score가 "이 구간에서 비정상적인 행동"을 탐지하는 유효한 metric. 다음: threshold 최적화, 실제 anomaly (사고/위반) 데이터로 검증
+
+## 2026-03-31: Motion-conditioned encoder가 auto-labeling에서 최고 성능 (A1 66.0%)
+**맥락**: Auto-labeling benchmark — L1(baseline) vs L3(OccAny depth) vs A1(motion-conditioned) NN 분류
+**발견**:
+- A1 (motion-conditioned): **66.0%** accuracy, F1=0.71
+- L3 (OccAny depth): 60.3%, F1=0.68
+- L1 (baseline): 58.7%, F1=0.67
+- A1이 L1 대비 +7.3pp — motion conditioning이 도로 유형 구분에 유리
+- 극심한 class imbalance (urban 372 vs parking 1)로 minority class 성능은 미측정
+**영향**: motion-conditioned world model의 embedding이 auto-labeling에 가장 적합. Route-specific model의 실용적 가치 추가 확인
+
+## 2026-03-31: Cosine surprise가 MSE보다 우수, warning time은 없음 (ROC 분석)
+**맥락**: Anomaly threshold 최적화 — train(normal) vs holdout(anomalous) ROC/PR 분석
+**발견**:
+- Cosine surprise AUC=0.749 vs MSE AUC=0.680 — cosine이 7pp 우수
+- F1: cosine 0.650 vs MSE 0.604 — cosine이 일관되게 나음
+- AUC가 0.75 수준 — train vs holdout이 모두 정상 주행이라 "distributional shift" 탐지 수준
+- Speed와 surprise 양의 상관 (r=0.33): 정차=낮은 surprise, 주행=높은 surprise
+- Top 5% surprise: 주행 중 (직진/회전/가속), Bottom 5%: 거의 정차
+- **Warning time 거의 0** — surprise spike가 갑작스러움, 점진적 상승 없음
+- frameskip=5 (0.5s)의 시간 해상도가 early warning에 부족
+**영향**: cosine surprise를 primary metric으로 채택. Early warning을 위해서는 finer temporal resolution (frameskip=1~2) 또는 sliding window smoothing 필요
+
+## 2026-03-31: 사고 영상 surprise 분석 — 약한 signal, domain gap이 지배적
+**맥락**: A1 모델로 사고 dashcam 100개 + 비사고 25개 영상의 surprise score 분석
+**발견**:
+- 사고 영상 mean surprise: 77.0 ± 83.8 vs 비사고: 51.1 ± 15.7 (1.51x 비율)
+- 사고 전 surprise 상승: 50-57%만 pre-crash에서 상승 (거의 random)
+- Embedding change rate: 사고 5.60 vs 비사고 5.95 (0.94x, 차이 없음)
+- Window analysis: pred_ratio median ≈ 1.0 — pre-crash와 non-crash 구분 불가
+- **근본 원인**: A1 모델이 Livlab 도로에서 학습 → dashcam 사고 영상은 완전히 다른 domain
+- 모든 프레임이 "surprising" (전체 MSE 50-80 수준 vs 정상 route에서 0.1-0.4)
+**영향**: cross-domain (다른 카메라/환경)에서는 surprise가 anomaly가 아닌 domain gap을 측정. Route-specific 사용이 필수 — 같은 카메라/구간 데이터에서만 surprise가 유효
