@@ -176,3 +176,12 @@
 - **V1 full 15-epoch: +25.8%** — A1 baseline +24.3%을 초과! Regression은 불완전 학습이 원인
 - Motion gap 학습 곡선: ep5 +8.3% → ep10 +19.4% → ep15 +25.8% (monotonic 증가)
 **영향**: maneuver token이 overlap 성능을 해치지 않고 오히려 소폭 개선 (+24.3% → +25.8%), 동시에 cross-domain에서도 action에 의미를 부여 (+16.7%). Phase 2 (structured transfer) 진행 정당화
+
+## 2026-03-31: Maneuver token의 cross-domain 효과는 중간 epoch에서 peak (overfitting 패턴)
+**맥락**: Track 2 V3 재실행 — full 15 epoch 학습 후 E0 평가
+**발견**:
+- V3 cross-domain: epoch 4에서 +16.7% → epoch 15에서 **+6.5%** (하락)
+- V1 overlap: epoch 15에서 +24.2% (안정)
+- Token이 장기 학습에서 action shortcut을 생성하여 cross-domain motion sensitivity 감소
+- Topology token 실험 (+2.5%)과 동일한 패턴 — token overfit
+**영향**: token conditioning의 cross-domain 효과는 early stopping이 필요. 최적 epoch은 ~7-10. 또는 token embedding에 dropout/regularization 추가 필요
