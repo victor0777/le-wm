@@ -60,9 +60,11 @@
 - [x] P0-D: Counterfactual sanity — 3/4 checks passed, plausible counterfactuals ← **done**
 
 ### Phase 7.1: Two Parallel Tracks (2-4주, P0 결과에 따라)
-- [ ] Track 1: Corridor planning (MPC/CEM + VP/OccAny cost)
-- [ ] Track 2: Causal token conditioning (maneuver + branch-count)
-- [ ] Track 2 decision gate: cross-domain shuffled gap > 10%
+- [x] Track 1: Corridor planning — CEM works (24.8% improvement), partial pass ← **done**
+- [x] Track 2: Maneuver token conditioning — **V3 cross-domain +16.7%, gate passed!** ← **done**
+- [x] Track 2 decision gate: cross-domain shuffled gap > 10% — **V3 +16.7% > 10% PASSED**
+- [ ] Track 2 follow-up: V1 full 15-epoch retraining (overlap regression investigation)
+- [ ] Track 1 follow-up: VP/OccAny-based cost function for planning
 
 ### Phase 7.2: Structured Scene Transfer (1-2개월, Track 2 성공 시)
 - [ ] Auto-derived lane topology from VP + OccAny

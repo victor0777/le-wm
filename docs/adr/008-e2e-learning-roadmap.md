@@ -124,9 +124,33 @@ Phase 2가 non-place generalization을 보인 경우에만:
 4. [x] P0-D: Counterfactual sanity — **3/4 passed, plausible counterfactuals**
 5. [ ] Pseudo-label noise audit — 소량 수동 검증 (optional, consistency >94%로 우선순위 낮음)
 
-### 다음 2-4주 — Phase 1
-- Track 1: MPC/CEM 구현 + VP/OccAny cost function
-- Track 2: Token conditioning 학습 코드 수정 + cross-domain ablation
+### Phase 1 결과 (2026-03-31)
+
+**Track 1: Corridor Planning — PARTIAL PASS**
+- CEM이 100% sequences에서 logged action보다 나은 action 발견, 24.8% MSE 감소
+- Cost landscape smooth, monotonic convergence
+- 단, logged action top-1 accuracy 0% → embedding MSE가 최적 cost function이 아님
+- Follow-up: VP/OccAny 기반 cost function 필요
+
+**Track 2: Maneuver Token Conditioning — DECISION GATE PASSED**
+
+| Variant | Train → Holdout | Shuffled Gap (no token) | Shuffled Gap (token) | Delta |
+|---------|----------------|------------------------|---------------------|-------|
+| V1 | Livlab → Livlab (overlap) | +24.3% | +3.0%* | -21.3pp |
+| V2 | da8241 → Livlab (cross) | +1.4% | +4.0% | +2.6pp |
+| **V3** | **Livlab → da8241 (cross rev)** | **-0.4%** | **+16.7%** | **+17.1pp** |
+
+*V1 epoch 7/15, 불완전 학습
+
+**V3 결과가 핵심**: cross-domain에서 action이 noise였던 것이 (+16.7%) 유의미한 signal이 됨.
+Maneuver token이 "왜 이 action인가"의 intent context를 제공하여 place-specific 한계를 돌파.
+
+→ **Phase 2 (Structured Scene Transfer) 진행 정당화**
+
+### 다음 단계
+- V1 full 15-epoch 재학습 (overlap regression 원인 조사)
+- Track 1: VP/OccAny cost function 설계
+- Phase 2: lane topology + branch-count token 추가
 
 ## Explicitly NOT Doing
 

@@ -133,3 +133,22 @@
 - Livlab routes: left/right 합계 19~24%, stop 21~46% — 시가지 주행 특성 명확
 - Codex 경고대로 straight이 지배적 → 평가 시 반드시 stratify 필요
 **영향**: pseudo-maneuver labels가 Track 2 token conditioning의 입력으로 사용 가능. 품질 충분 (consistency >94%), 비용 제로 (기존 데이터만 사용). 다만 left/right가 전체의 12%에 불과하여 class imbalance 주의
+
+## 2026-03-31: Corridor planning — CEM이 작동하나 logged action 복원은 불완전 (Track 1)
+**맥락**: Track 1 — A1 모델로 MPC/CEM corridor planning, 64 candidates, 100 sequences
+**발견**:
+- Logged action 평균 rank 29.9/64 (중앙값 24.5) — median 이상이지만 top-1은 0%
+- CEM이 100% sequences에서 logged보다 낮은 MSE를 찾음, 5 iteration에서 24.8% MSE 감소
+- CEM 수렴이 monotonic (0.375→0.282) — cost landscape가 smooth하고 optimizable
+- 하지만 CEM-optimal action이 물리적으로 올바른지는 미확인 (embedding MSE ≠ driving quality)
+**영향**: planning signal은 존재하나 partial. Raw embedding MSE가 아닌 VP/OccAny 기반 cost function이 필요하거나, planning용 fine-tuning이 필요. Short-horizon counterfactual evaluator로는 사용 가능
+
+## 2026-03-31: Maneuver token이 cross-domain motion conditioning을 부활시킴 (Track 2)
+**맥락**: Track 2 — maneuver token (6-class pseudo-label) embedding을 action embedding에 추가하여 학습
+**발견**:
+- **V3 (오버랩→비오버랩 cross-domain)**: shuffled gap -0.4% (토큰없음) → **+16.7% (토큰있음)**
+  - ADR-008의 decision gate (+10%) 초과! Maneuver token이 cross-domain에서 action에 의미를 부여
+- V2 (비오버랩→오버랩): +1.4% → +4.0% (소폭 개선, 역방향은 효과 제한적)
+- V1 (오버랩→오버랩): +24.3% → +3.0% (하락, 학습 불완전 epoch 7/15가 원인 가능)
+- 주의: V1 하락은 maneuver token이 action의 역할을 일부 대체하여 action sensitivity를 낮출 가능성도 있음
+**영향**: maneuver token이 "왜 이 action인가"의 맥락을 제공하여 cross-domain generalization의 bridge 역할. V3 +16.7%는 H4 (goal 부재) 가설에 대한 해결책이 될 수 있음. Phase 2 (structured transfer) 진행 정당화
